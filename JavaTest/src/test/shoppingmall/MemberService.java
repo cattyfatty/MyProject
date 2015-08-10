@@ -229,7 +229,10 @@ public class MemberService {
 					
 					int result = memberDao.updateMemberPassword(member);
 					if(result < 1) {
-						System.out.println("");
+						System.out.println("변경 실패...다시 해보세요.");
+						continue;
+					} else {
+						break;
 					}
 				} else {
 					System.out.println("비밀번호를 확인하세요.");
