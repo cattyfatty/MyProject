@@ -1,6 +1,6 @@
 package test.shoppingmall;
 
-
+import test.shoppingmall.service.MemberService;
 
 public class MemberDaoTest {
 

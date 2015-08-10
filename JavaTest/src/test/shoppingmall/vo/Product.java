@@ -1,4 +1,4 @@
-package test.shoppingmall;
+package test.shoppingmall.vo;
 
 public class Product {
 	private int pNo;

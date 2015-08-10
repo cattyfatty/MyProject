@@ -1,10 +1,14 @@
-package test.shoppingmall;
+package test.shoppingmall.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import test.shoppingmall.ConnectionManager;
+import test.shoppingmall.dao.MemberDao;
+import test.shoppingmall.vo.Member;
 
 public class MemberService {
 	private Connection conn;
