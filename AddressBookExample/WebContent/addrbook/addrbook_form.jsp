@@ -14,6 +14,7 @@
 		<hr>
 		[<a href="addrbook_list.jsp">주소록 목록으로</a>]
 		<form name="form1" method="post" action="addrbook_control.jsp">
+		<input type="hidden" name="action" value="insert">
 			<table border="1">
 				<tr>
 					<th>이 름</th>
@@ -33,7 +34,7 @@
 				</tr>
 				<tr>
 					<th>회 사</th>
-					<td><input type="text" name="ab_comdepth" maxlength="20"></td>
+					<td><input type="text" name="ab_comdept" maxlength="20"></td>
 				</tr>
 				<tr>
 					<th>메 모</th>
