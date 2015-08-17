@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Abel);
+
+* {margin: 0; paddiong: 0;}
+ol,ul {list-style: none;}
+a {outline: 0; text-decoration: none; color: #555; }
+img {border: 0;}
+body {font: 14px/1.6 Abel; color:#555; background-color: #f6f6f6;}
+
+h1 {font-size: 35px; }
+li {float: left; margin-left: 10px; font-size: 16px;}
+li i {margin-right: 5px;}
+li i:hover {color: #ff3f3f;}
+li a:hover {color: #ff3f3f;}
