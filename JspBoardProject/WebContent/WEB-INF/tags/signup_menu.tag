@@ -3,14 +3,14 @@
 
 <c:choose>
 	<c:when test="${uid != null }">
-		<li><a href="#"><i class="fa fa-cog"></i>${uid}</a></li>
+		<li><a class="mn_edit" href="#"><i class="fa fa-cog"></i>${uid}</a></li>
 		<li>/</li>
-		<li><a href="#"><i class="fa fa-sign-out"></i>SIGN OUT</a></li>
+		<li><a class="mn_signout" href="#"><i class="fa fa-sign-out"></i>SIGN OUT</a></li>
 	</c:when>
 	<c:otherwise>
-		<li><a href="#"><i class="fa fa-sign-in"></i>SIGN IN</a></li>
+		<li><a class="mn_signin" href="#"><i class="fa fa-sign-in"></i>SIGN IN</a></li>
 		<li>/</li>
-		<li><a href="#">SIGN UP</a></li>
+		<li><a class="mn_signup" href="#">SIGN UP</a></li>
 	</c:otherwise>
 </c:choose>
 <li><i class="fa fa-facebook-square"></i></li>
