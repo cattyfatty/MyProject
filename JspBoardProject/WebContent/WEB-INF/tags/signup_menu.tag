@@ -3,9 +3,9 @@
 
 <c:choose>
 	<c:when test="${uid != null }">
-		<li><a class="mn_edit" href="#"><i class="fa fa-cog"></i>${uid}</a></li>
+		<li><a class="mn_edit" href="#"><i class="fa fa-cog"></i>${member_id}</a></li>
 		<li>/</li>
-		<li><a class="mn_signout" href="#"><i class="fa fa-sign-out"></i>SIGN OUT</a></li>
+		<li><a class="mn_signout" href="user_control.jsp?action=logout"><i class="fa fa-sign-out"></i>SIGN OUT</a></li>
 	</c:when>
 	<c:otherwise>
 		<li><a class="mn_signin" href="#"><i class="fa fa-sign-in"></i>SIGN IN</a></li>

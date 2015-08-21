@@ -2,15 +2,15 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div id="ms_signin">
-	<form class="ms_form" name="sign_in" method="post" action="">
+	<form class="ms_form" name="sign_in" method="post" action="user_control.jsp?action=login">
 		<p class="fieldset">
-			<label class="image_replace ms_id" for="signin_id">ID</label>
-			<input class="full_width has_padding has_border" id="signin_id" type="text" placeholder="ID"/>
+			<label class="image_replace ms_email" for="signin_id">E-mail</label>
+			<input class="full_width has_padding has_border" id="signin_id" type="text" name="member_email" placeholder="E-mail"/>
 			<span class="ms_error_msg">Error</span>
 		</p>
 		<p class="fieldset">
 			<label class="image_replace ms_pw" for="signin_pw">Password</label>
-			<input class="full_width has_padding has_border" id="signin_pw" type="password" placeholder="Password"/>
+			<input class="full_width has_padding has_border" id="signin_pw" type="password" name="member_password" placeholder="Password"/>
 			<span class="ms_error_msg">Error</span>
 		</p>
 		<p class="fieldset">

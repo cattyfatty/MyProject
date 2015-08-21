@@ -17,8 +17,9 @@
 		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 		<script type="text/javascript" src="js/prefixfree.min.js"></script>
 		<script type="text/javascript" src="js/custom.js"></script>
+		<script type="text/javascript" src="js/select.js"></script>
 	</head>
-	<body>
+	<body class="main">
 		<!-- Logo & Menu -->
 		<header role="banner">
 			<div id="main_logo">
@@ -37,11 +38,23 @@
 		<div class="ms_user_modal">
 			<div class="ms_user_modal_container">
 				<tag:sign_in/>
+				<tag:sign_up/>
+				<tag:reset_pw/>
+				<tag:edit_user/>
 			</div>
 		</div>
 		
-		<img class="background" src="img/bg.png" alt=""/>
+		<div class="bg_container">
+			<!-- <img class="background" src="img/bg.png" alt=""/> -->
+			<!-- <img class="galaxy" id="glx1" src="img/galaxy2.png" />
+			<img class="galaxy" id="glx2" src="img/galaxy3.png" />
+			<img class="background galaxy" id="glx3" src="img/galaxy4.png" />
+			<img class="background galaxy" id="glx4" src="img/galaxy5.png" />
+			<img class="background galaxy" id="glx5" src="img/galaxy6.png" /> -->
+		</div>
 		
-		<div class="content"></div>
+		<div class="content">
+			<jsp:include page="board_list.jsp"/>
+		</div>
 	</body>
 </html>
