@@ -23,7 +23,7 @@ $(document).ready(function() {
 			if (ts_check(sels[i],ts_selectclass))
 			{
 				var hiddenfield=document.createElement('input');
-				hiddenfield.name='group_opt';
+				hiddenfield.name='group_id';
 				hiddenfield.type='hidden';
 				hiddenfield.id='group';
 				hiddenfield.value=sels[i].options[0].value;

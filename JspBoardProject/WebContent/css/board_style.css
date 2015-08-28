@@ -14,8 +14,8 @@ input, textarea {font-family: Abel; font-size: 16px;}
 
 /* container */
 .board_container {text-align: left; margin: 0 auto; padding: 0; min-width: 768px; font: 100% Abel; 
-	color:#3d3d3d; background-color: #fdf2fe; height: 100%; width: 100%;}
-#content {min-height: 450px; margin: 0 auto; box-sizing: content-box; width: 100%; padding: 15px;}
+	color:#3d3d3d; background-color: #fdf2fe; height: 100%; width: 100%; border-radius: 2.5em;}
+#content {min-height: 450px; margin: 0 auto; box-sizing: border-box; width: 100%; padding: 15px;}
 
 /* header */
 .header {margin-bottom: 0; clear: both; height: 40px; border-bottom: 1px solid #c3ceca;}

@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div id="ms_signin">
-	<form class="ms_form" name="sign_in" method="post" action="user_control.jsp?action=login">
+	<form class="ms_form" name="sign_in" method="post" action="user_control.jsp?action=signin">
 		<p class="fieldset">
 			<label class="image_replace ms_email" for="signin_id">E-mail</label>
 			<input class="full_width has_padding has_border" id="signin_id" type="text" name="member_email" placeholder="E-mail"/>

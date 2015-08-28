@@ -20,7 +20,7 @@
 		</p>
 		<p class="fieldset">
 			<label class="ms_select_label">KOSA SW Engineer Course Group:</label>
-			<select name="group" class="ms_select">
+			<select name="group_id" class="ms_select">
 				<option value="0">Please select your group: </option>
 				<option value="1">Group 1</option>
 				<option value="2">Group 2</option>

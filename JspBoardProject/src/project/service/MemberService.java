@@ -2,6 +2,7 @@ package project.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import project.ConnectionManager;
 import project.member.dao.GroupDao;
@@ -10,6 +11,7 @@ import project.member.vo.Group;
 import project.member.vo.Member;
 
 public class MemberService {
+	
 	public int joinMember(Member member, int group_id) {
 		Connection conn = null;
 		int uid = 0;
@@ -21,7 +23,7 @@ public class MemberService {
 			
 			if(memberDao.selectByEmail(member.getMember_email()) != null) {
 				System.out.println("user already exits");
-				return -1;
+				uid = -1;
 			} else {
 				uid = memberDao.insert(member);
 				Group group = new Group();
@@ -31,8 +33,9 @@ public class MemberService {
 			}
 			conn.commit();
 		} catch(Exception e) {
-			System.out.println("error");
+			System.out.println("join error");
 			e.printStackTrace();
+			uid = -1;
 		} finally {
 			try{conn.close();} catch(SQLException e){}
 		}
@@ -63,12 +66,30 @@ public class MemberService {
 				System.out.println("no member");
 			}
 		} catch (Exception e) {
-			System.out.println("error");
+			System.out.println("login error");
 			e.printStackTrace();
 		} finally {
 			try{conn.close();} catch(SQLException e){}
 		}
 		
 		return cur_member;
+	}
+	
+	public ArrayList<Group> getGroup(Member member) {
+		ArrayList<Group> group_list = null;
+		Connection conn = null;
+		try {
+			conn = ConnectionManager.getConnection();
+			GroupDao groupDao = new GroupDao(conn);
+			
+			group_list = groupDao.selectGroup(member.getMember_uid());
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("get group error");
+		} finally {
+			try{conn.close();} catch(SQLException e){}
+		}
+		
+		return group_list;
 	}
 }
