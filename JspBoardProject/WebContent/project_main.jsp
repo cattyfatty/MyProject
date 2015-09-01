@@ -45,15 +45,6 @@
 			</div>
 		</div>
 		
-		<div class="bg_container">
-			<!-- <img class="background" src="img/bg.png" alt=""/> -->
-			<!-- <img class="galaxy" id="glx1" src="img/galaxy2.png" />
-			<img class="galaxy" id="glx2" src="img/galaxy3.png" />
-			<img class="background galaxy" id="glx3" src="img/galaxy4.png" />
-			<img class="background galaxy" id="glx4" src="img/galaxy5.png" />
-			<img class="background galaxy" id="glx5" src="img/galaxy6.png" /> -->
-		</div>
-		
 		<div class="content">
 			<jsp:include page="board_list.jsp"/>
 		</div>

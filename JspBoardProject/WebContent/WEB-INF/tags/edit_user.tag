@@ -12,7 +12,7 @@
 		<form class="ms_form" name="edit_userName" method="post" action="">
 			<p class="fieldset">
 				<label class="image_replace ms_id" for="edit_id">User Name</label> 
-				<input class="full_width has_padding has_border" id="edit_id" type="text" placeholder="User Name" /> 
+				<input class="full_width has_padding has_border" id="edit_id" type="text" name="new_id" placeholder="User Name" /> 
 				<span class="ms_error_msg">Error</span>
 			</p>
 			<p class="fieldset">
@@ -24,7 +24,7 @@
 		<form class="ms_form" name="edit_pw" method="post" action="">
 			<p class="fieldset">
 				<label class="image_replace ms_pw" for="edit_pw">User Name</label> 
-				<input class="full_width has_padding has_border" id="edit_pw" type="text" placeholder="Password" /> 
+				<input class="full_width has_padding has_border" id="edit_pw" type="text" name="new_password" placeholder="Password" /> 
 				<span class="ms_error_msg">Error</span>
 			</p>
 			<p class="fieldset">
@@ -40,8 +40,20 @@
 	<div id="ms_edit_grp" class="is_selected">
 		<form class="ms_form" name="edit_group" method="post" action="">
 			<p class="fieldset">
-				<label class="ms_select_label">KOSA SW Engineer Course Group:</label>
-				<select class="ms_select">
+				<label class="ms_select_label">Join a New Group:</label>
+				<select name="new_group" class="ms_select">
+					<option value="0">Please select your group: </option>
+					<option value="1">Group 1</option>
+					<option value="2">Group 2</option>
+					<option value="3">Group 3</option>
+					<option value="4">Group 4</option>
+					<option value="5">Group 5</option>
+				</select>
+			</p>
+			<p class="fieldset">
+				<h4>OR</h4>
+				<label class="ms_select_label">Leave one of your Groups</label>
+				<select name="new_group" class="ms_select">
 					<option value="0">Please select your group: </option>
 					<option value="1">Group 1</option>
 					<option value="2">Group 2</option>

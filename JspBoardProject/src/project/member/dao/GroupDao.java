@@ -67,7 +67,7 @@ public class GroupDao {
 		return success;
 	}
 	
-	public ArrayList<Group> selectGroup(int uid) throws SQLException {
+	public ArrayList<Group> selectAllGroup(int uid) throws SQLException {
 		ArrayList<Group> group_list = new ArrayList<Group>();
 		String sql = "SELECT * FROM team1.hak_groups WHERE member_uid = ?";
 		

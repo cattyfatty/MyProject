@@ -82,7 +82,7 @@ public class MemberService {
 			conn = ConnectionManager.getConnection();
 			GroupDao groupDao = new GroupDao(conn);
 			
-			group_list = groupDao.selectGroup(member.getMember_uid());
+			group_list = groupDao.selectAllGroup(member.getMember_uid());
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("get group error");
@@ -91,5 +91,50 @@ public class MemberService {
 		}
 		
 		return group_list;
+	}
+	
+	public void changePassword(Member member, String newPw) {
+		Connection conn = null;
+		try {
+			conn = ConnectionManager.getConnection();
+			MemberDao memberDao = new MemberDao(conn);
+			
+			member.setMember_password(newPw);
+			memberDao.updatePassword(member);
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("change password error");
+		} finally {
+			try{conn.close();} catch(SQLException e){}
+		}
+	}
+	
+	public void changeUserName(Member member, String newId) {
+		Connection conn = null;
+		try {
+			conn = ConnectionManager.getConnection();
+			MemberDao memberDao = new MemberDao(conn);
+			
+			member.setMember_id(newId);
+			memberDao.updateName(member);
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("change username error");
+		} finally {
+			try{conn.close();} catch(SQLException e){}
+		}
+	}
+	
+	public void changeGroup(Member member, String newGroup) {
+		Connection conn = null;
+		try {
+			conn = ConnectionManager.getConnection();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("change password error");
+		} finally {
+			try{conn.close();} catch(SQLException e){}
+		}
 	}
 }
